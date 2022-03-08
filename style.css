@@ -36,8 +36,6 @@
 }
 
 #nav ul li a:hover{
-    /*color: #fff;
-    background-color: #6b5661;*/
     color: #6B5661;
     background-color: #e1deee;
     box-shadow: 1px 1px 5px #000;
@@ -110,7 +108,6 @@
 #about{
     display: block;
     width: 100%;
-    /*background-color: #6b5661;*/
     background-color: #e1deee;
 }
 
@@ -120,44 +117,74 @@
     width: 60%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 100px 0 150px 0;
+    padding: 100px 0 120px 0;
     box-sizing: border-box;
-    /*background: radial-gradient(circle at top left, #504b63, #241e36);*/
     border-radius: 10px;
     text-align: center;
     color: #6b5661;
 }
 
 #name{
-    font-size: 2.3em;
+    font-size: 3em;
+    color: #ef476f;
+    text-shadow: 1px 1px 1px #999;
 }
 
 .italic{
     font-style: italic;
 }
 
-#competences, #autres{
-    display: inline-block;
-    margin-top: 50px;
-    text-align: left;
-}
-
-#competences p, #autres p{
-    font-size: 1.4em;
+.gras{
     font-weight: 600;
 }
 
-#competences ul li, #autres ul li{
+#biographie{
+    font-size: 0.9em;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #bbb;
+    margin-top: 20px;
+}
+
+#competences-titre{
+    display: inline-block;
+    font-size: 2.3em;
+    margin-top: 50px;
+    padding: 30px 80px;
+    color: #6b5661;
+    border-top: 2px solid #fff;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+#competences-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#competences, #notions, #autres{
+    flex: 0 0 auto;
+    width: 120px;
+    background: radial-gradient(#494458, #161224);
+    padding: 30px 25px 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #999;
+    text-align: start;
+}
+
+#competences p, #notions p, #autres p{
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #ef476f;
+}
+
+#competences ul li, #notions ul li, #autres ul li{
     list-style-type: none;
-}
-
-#competences{
-    padding-right: 30px;
-    border-right: 1px solid #ef476f;
-}
-
-#autres{
-    padding-left: 30px;
+    color: #fff;
 }
 
 
@@ -171,7 +198,7 @@
 
 #titre-projets{
     margin: 0;
-    padding-top: 50px;
+    padding: 50px 0px 20px 0px;
     font-size: 2.5em;
     text-align: center;
     color: #363244;
@@ -193,6 +220,7 @@
     margin: 15px 10px;
     padding-bottom: 15px;
     background-color: #e1deee;
+    box-shadow: 0 0 5px #ddd;
     color: #363244;
     font-weight: 400;
     text-align: center;
@@ -219,11 +247,93 @@
 .project-item:hover{
     background-color: #6b5661;
     box-shadow: 1px 1px 10px #999;
-}
-
-.project-item a:hover{
+    cursor: pointer;
     color: #fff;
     font-weight: 600;
+}
+
+.details-container{
+    display: none;
+    width: 75%;
+    opacity: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color:#6B5661;
+    color: #e1deee;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+}
+
+.opacity{
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fermer-projet-container{
+    width: 100%;
+    text-align: end;
+    margin-bottom: 3px;
+}
+
+.fermer-projet{
+    font-size: 1.8em;
+    font-weight: 200;
+    color: #fff;
+    margin-right: 10px;
+    text-shadow: 0px 0px 5px #363244;
+    background-color: transparent;
+    border: none;
+    transition: all 1s;
+}
+
+.fermer-projet:hover{
+    transform: rotate(360deg);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.details-container img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.titre-projet{
+    font-size: 1.8em;
+    font-weight: 800;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.details-container p, .details-container a{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.details-container a{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-bottom: 1px solid #ef476f;
+    transition: all 1s;
+}
+
+.details-container a:hover{
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    border-bottom: 3px solid #ef476f;
 }
 
 
@@ -273,6 +383,12 @@
     }
 }
 
+@media screen and (max-width: 950px){
+    #about-elements{
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 500px){
     #nav ul li{
         padding: 0px 5px;
@@ -285,28 +401,40 @@
         margin-top: 50px;
     }
     #name{
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     #about-elements{
         padding: 40px 0 60px 0;
+        width: 80%;
     }
-    #competences, #autres{
-        display: block;
-        margin: 0;
-        font-size: 0.9em;
+    #infos{
+        margin-bottom: 30px;
     }
-    #competences p, #autres p{
+    #biographie{
+        font-size: 0.8em;
+        margin-top: 7px;
+    }
+    #competences-titre{
+        font-size: 1.7em;
+        margin-top: 20px;
+        padding: 30px 0px;
+    }
+    #competences-container{
+        flex-flow: column;
+        margin-top: 0px;
+        gap: 15px;
+    } 
+    #competences, #notions, #autres{
+        padding: 20px 20px 25px 20px;
+        width: 110px;
+        align-self: center;
+    }
+    #competences p, #notions p, #autres p{
         font-size: 1.2em;
     }
-    #competences{
-        margin-top: 20px;
-        padding: 0 0 20px 50px;
-        border-right: none;
-        border-bottom: 1px solid #ef476f;
-    }
-    #autres{
-        padding: 0 0 0 50px;
-        margin-top: 20px;
+    
+    #competences ul li, #notions ul li, #autres ul li{
+        font-size: 0.9em;
     }
     #titre-projets{
         font-size: 1.7em;
@@ -314,6 +442,18 @@
     }
     #project-container{
         padding: 20px 0 40px 0;
+    }
+    .fermer-projet{
+        font-size: 1.5em;
+    }
+    .titre-projet{
+        font-size: 1.2em;
+    }
+    .technologies{
+        font-size: 0.9em;
+    }
+    .details-container a{
+        font-size: 1.2em;
     }
     #contact-elements{
         padding: 40px 0 60px 0;

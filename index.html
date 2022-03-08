@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Alice Guegan - Front End Developper</title>
+		<title>Alice Guegan - Développeuse Front-End</title>
 		<meta charset="utf-8">
 		<meta name="viewport"
 		content="width=device-width, initial-scale=1, user-scalable=no">
@@ -34,27 +34,41 @@
                 <h3 id="name">À propos de moi</h3>
 
                 <div id="infos">
+                    <h4>Développeuse front-end junior</h4>
                     <p class="italic">Habite à Paris, France</p>
                     <br>
-                    <p>Développeuse front-end junior autodidacte</p>
+                    <p id="biographie">Passionnée de technologies depuis mon plus jeune âge, j'ai appris les rudiments du développement front-end à l'adolescence. Après avoir eu mon baccalauréat, je me suis orientée vers la photographie avant de me reconvertir dans le développement. Après une formation et avoir travaillé sur différents projets personnels, challenges de code, etc, je suis à la recherche de mon premier emploi en tant développeuse front-end en télétravail.</p>
                 </div>
 
-                <div id="competences">
-                    <p>Front-end</p>
-                    <ul>
-                        <li>⇢ HTML / CSS</li>
-                        <li>⇢ Javascript</li>
-                        <li>⇢ React</li>
-                    </ul>
-                </div>
+                <h3 id="competences-titre">Compétences</h3>
 
-                <div id="autres">
-                <p>Autres</p>
-                    <ul>
-                        <li>⇢ Photoshop</li>
-                        <li>⇢ Lightroom</li>
-                        <li>⇢ Indesign</li>
-                    </ul>
+                <div id="competences-container">
+                    <div id="competences">
+                        <p>Front-end</p>
+                        <ul>
+                            <li>⇢ HTML / CSS</li>
+                            <li>⇢ Javascript</li>
+                            <li>⇢ React</li>
+                        </ul>
+                    </div>
+
+                    <div id="notions">
+                        <p>Notions</p>
+                        <ul>
+                            <li>⇢ Node.JS</li>
+                            <li>⇢ Express</li>
+                            <li>⇢ MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div id="autres">
+                        <p>Autres</p>
+                        <ul>
+                            <li>⇢ Photoshop</li>
+                            <li>⇢ Lightroom</li>
+                            <li>⇢ Indesign</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,26 +76,54 @@
         <section id="projets">
             <h2 id="titre-projets">Mes projets</h2>
 
+            <div class="details-container" id="acnh-details">
+                <div class="fermer-projet-container">
+                    <button class="fermer-projet">X</button>
+                </div>
+                    <img src="images-projets/acnh.png"></img>
+                    <p class="titre-projet">Guide Animal Crossing New Horizons</p>
+                    <p class="technologies"><span class="gras">Technologies utilisées :</span> HTML, CSS, REACT.JS, utilisation d'API</p>
+                    <br>
+                    <a href="/guide-acnh/">Voir la démo</a>
+            </div>
+
+            <div class="details-container" id="recettes-details">
+                <div class="fermer-projet-container">
+                    <button class="fermer-projet">X</button>
+                </div>
+                    <img src="images-projets/recette.png"></img>
+                    <p class="titre-projet">Mes recettes</p>
+                    <p class="technologies"><span class="gras">Technologies utilisées :</span> HTML, CSS, REACT.JS</p>
+                    <br>
+                    <a href="/mes-recettes/">Voir la démo</a>
+            </div>
+
+            <div class="details-container" id="quiz-details">
+                <div class="fermer-projet-container">
+                    <button class="fermer-projet">X</button>
+                </div>
+                    <img src="images-projets/quiz.png"></img>
+                    <p class="titre-projet">Quiz de culture générale</p>
+                    <p class="technologies"><span class="gras">Technologies utilisées :</span> HTML, CSS, REACT.JS</p>
+                    <br>
+                    <a href="/quiz-app/">Voir la démo</a>
+            </div>
+
             <div id="project-container">
-                <div class="project-item">
-                    <a href="/guide-acnh/">
-                        <img src="images-projets/acnh.png"></img>
-                        <p class="legende">Guide Animal Crossing</p>
-                    </a>
+                <div class="project-item" id="acnh">
+                    <img src="images-projets/acnh.png"></img>
+                    <p class="legende">Guide Animal Crossing</p>
                 </div>
 
-                <div class="project-item">
-                    <a href="/mes-recettes/">
+                <div class="project-item" id="recettes">
                         <img src="images-projets/recette.png"></img>
                         <p class="legende">Mes recettes</p>
                     </a>
                 </div>
-	
-		<div class="project-item">
-                    <a href="/quiz-app/">
-                        <img src="images-projets/quiz.png"></img>
-                        <p class="legende">Quiz Culture G</p>
-                    </a>
+
+                <div class="project-item" id="quiz">
+                    <img src="images-projets/quiz.png"></img>
+                    <p class="legende">Quiz Culture G</p>
                 </div>
             </div>
         </section>
@@ -95,7 +137,7 @@
                 <p id="mail">im.alice@live.fr</p>
             </div>
 
-            <p id="copyright">© Alice Guegan, 2021</p>
+            <p id="copyright">© Alice Guegan, 2022</p>
         </section>
         
     </body>
