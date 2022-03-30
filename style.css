@@ -336,6 +336,11 @@
     border-bottom: 3px solid #ef476f;
 }
 
+.small{
+    font-size: 0.7em;
+    padding-top: 5px;
+}
+
 
 /*CONTACT*/
 
